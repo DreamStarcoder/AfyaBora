@@ -9,7 +9,7 @@
     <android.support.design.button.MaterialButton
         android:id="@+id/bt_patient"
         android:layout_width="@dimen/_260sdp"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_50sdp"
         android:layout_above="@id/bt_doctor"
         android:textSize="@dimen/_15sdp"
         app:cornerRadius="@dimen/_20sdp"
@@ -21,7 +21,7 @@
     <android.support.design.button.MaterialButton
         android:id="@+id/bt_doctor"
         android:layout_width="@dimen/_260sdp"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_50sdp"
         android:layout_centerInParent="true"
         android:layout_margin="@dimen/_10sdp"
         android:textSize="@dimen/_15sdp"
@@ -35,7 +35,7 @@
     <android.support.design.button.MaterialButton
         android:id="@+id/bt_labortary"
         android:layout_width="@dimen/_260sdp"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_50sdp"
         android:layout_centerInParent="true"
         android:textSize="@dimen/_14sdp"
         android:backgroundTint="@color/cardview_light_background"

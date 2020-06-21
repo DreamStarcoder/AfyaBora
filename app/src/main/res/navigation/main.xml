@@ -3,13 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    app:startDestination="@id/labortaryFragment">
-
+    app:startDestination="@id/welcomeFragment">
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.acuity.afyabora.ui.fragments.WelcomeFragment"
         android:label="fragment_welcome"
-        tools:layout="@layout/fragment_welcome" />
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/patientFragment"
         android:name="com.acuity.afyabora.ui.fragments.PatientFragment"
@@ -20,4 +23,44 @@
         android:name="com.acuity.afyabora.ui.fragments.LabortaryFragment"
         android:label="fragment_labortary"
         tools:layout="@layout/fragment_labortary" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.acuity.afyabora.ui.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_signUpTypeFragment"
+            app:destination="@id/signUpTypeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgotFragment"
+            app:destination="@id/forgotFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorFragment"
+        android:name="com.acuity.afyabora.ui.fragments.DoctorFragment"
+        android:label="fragment_doctor"
+        tools:layout="@layout/fragment_doctor" />
+    <fragment
+        android:id="@+id/signUpTypeFragment"
+        android:name="com.acuity.afyabora.ui.fragments.SignUpTypeFragment"
+        android:label="fragment_signup_type"
+        tools:layout="@layout/fragment_signup_type">
+        <action
+            android:id="@+id/action_signUpTypeFragment_to_patientFragment"
+            app:destination="@id/patientFragment" />
+        <action
+            android:id="@+id/action_signUpTypeFragment_to_labortaryFragment"
+            app:destination="@id/labortaryFragment" />
+        <action
+            android:id="@+id/action_signUpTypeFragment_to_doctorFragment"
+            app:destination="@id/doctorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotFragment"
+        android:name="com.acuity.afyabora.ui.fragments.ForgotFragment"
+        android:label="ForgotFragment">
+        <action
+            android:id="@+id/action_forgotFragment_to_signUpTypeFragment"
+            app:destination="@id/signUpTypeFragment" />
+    </fragment>
 </navigation>

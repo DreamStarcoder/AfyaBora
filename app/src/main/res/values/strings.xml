@@ -51,7 +51,7 @@
         <item>11:30 AM</item>
         <item>12:00 PM</item>
     </string-array>
-<string-array name="closing_hours">
+    <string-array name="closing_hours">
         <item>closing hours</item>
         <item>5:00 PM</item>
         <item>5:30 PM</item>

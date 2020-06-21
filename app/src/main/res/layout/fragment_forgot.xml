@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#C8AAAAAA"
-        android:text="Login"
+        android:text="Reset Password"
         android:textSize="@dimen/_16sdp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
@@ -24,6 +24,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_100sdp"
         android:hint="Enter Email">
 
@@ -37,58 +38,22 @@
             tools:ignore="KeyboardInaccessibleWidget" />
     </android.support.design.widget.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/etl_password"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <android.support.design.button.MaterialButton
+        android:id="@+id/bt_forgot"
         android:layout_width="@dimen/_200sdp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:text="Send Password Rest Link"
         android:layout_below="@id/etL_mail"
-        app:passwordToggleEnabled="true"
-        android:hint="Enter Password">
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/et_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:inputType="textPassword"
-            tools:ignore="KeyboardInaccessibleWidget" />
-    </android.support.design.widget.TextInputLayout>
-
-    <LinearLayout
-        android:id="@+id/layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/etl_password"
-        android:layout_marginLeft="@dimen/_40sdp"
-        android:layout_marginTop="@dimen/_16sdp"
-        android:orientation="horizontal">
-
-        <android.support.design.button.MaterialButton
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="wrap_content"
-            android:text="Login"
-            app:cornerRadius="@dimen/_16sdp"
-            android:backgroundTint="@android:color/holo_blue_light" />
-
-        <TextView
-            android:id="@+id/btn_forgot"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Forgot Password"
-            android:textStyle="bold"
-            android:layout_marginLeft="@dimen/_8sdp"
-            android:textColor="@android:color/holo_blue_dark" />
-    </LinearLayout>
+        app:cornerRadius="@dimen/_30sdp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@android:color/holo_blue_dark" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_below="@id/layout"
+        android:layout_centerInParent="true"
+
         android:gravity="center">
 
         <TextView
@@ -102,9 +67,10 @@
         <android.support.design.button.MaterialButton
             android:id="@+id/btn_new_account"
             android:layout_width="@dimen/_150sdp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_50sdp"
             android:text="Create an Account"
             app:cornerRadius="@dimen/_30sdp"
             android:backgroundTint="@android:color/holo_blue_dark" />
     </LinearLayout>
+
 </RelativeLayout>
