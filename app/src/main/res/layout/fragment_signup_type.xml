@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.SignUpTypeFragment">
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/bt_patient"
+        android:layout_width="@dimen/_260sdp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bt_doctor"
+        android:textSize="@dimen/_15sdp"
+        app:cornerRadius="@dimen/_20sdp"
+        android:backgroundTint="@color/cardview_light_background"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_centerHorizontal="true"
+        android:text="Register as a Patient" />
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/bt_doctor"
+        android:layout_width="@dimen/_260sdp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/_10sdp"
+        android:textSize="@dimen/_15sdp"
+        android:drawableStart="@drawable/ic_doctor"
+        app:cornerRadius="@dimen/_20sdp"
+        android:backgroundTint="@color/cardview_light_background"
+        android:textColor="@android:color/holo_blue_light"
+        android:drawableTint="@color/colorAccent"
+        android:text="Register as a Doctor" />
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/bt_labortary"
+        android:layout_width="@dimen/_260sdp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/_14sdp"
+        android:backgroundTint="@color/cardview_light_background"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_below="@id/bt_doctor"
+        app:cornerRadius="@dimen/_20sdp"
+        android:text="Register as a Laboratory" />
+</RelativeLayout>

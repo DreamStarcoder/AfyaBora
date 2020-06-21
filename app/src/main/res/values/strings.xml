@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">AfyaBora</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="cities">
+        <item>Select city name</item>
+        <item>Nairobi</item>
+        <item>Mombasa</item>
+        <item>Kisumu</item>
+        <item>Machakos</item>
+        <item>Thika</item>
+        <item>Eldoret</item>>
+        <item>Kitui</item>
+        <item>Kabete</item>
+        <item>Wote</item>
+        <item>Kiambu</item>
+        <item>Nakuru</item>
+        <item>Kaiboi</item>
+        <item>Kitale</item>
+        <item>Kisii</item>
+        <item>Bondo</item>
+        <item>Siaya</item>
+        <item>Chuka</item>
+        <item>Karatina</item>
+        <item>Maseno</item>
+        <item>Kikuyu</item>
+        <item>Mbita</item>
+        <item>Sawa Sawa</item>
+        <item>Turbo</item>
+    </string-array>
+    <string-array name="working_days">
+        <item>Working Days</item>
+        <item>From Monday To Friday</item>
+        <item>From Monday To Friday</item>
+        <item>From Monday To Saturday</item>
+        <item>From Monday To Sunday</item>
+    </string-array>
+    <string-array name="opening_hours">
+        <item>Opening hours</item>
+        <item>6:00 AM</item>
+        <item>6:30 AM</item>
+        <item>7:00 AM</item>
+        <item>7:30 AM</item>
+        <item>8:00 AM</item>
+        <item>8:30 AM</item>
+        <item>9:00 AM</item>
+        <item>9:30 AM</item>
+        <item>10:00 AM</item>
+        <item>10:30 AM</item>
+        <item>11:00 AM</item>
+        <item>11:30 AM</item>
+        <item>12:00 PM</item>
+    </string-array>
+<string-array name="closing_hours">
+        <item>closing hours</item>
+        <item>5:00 PM</item>
+        <item>5:30 PM</item>
+        <item>6:00 PM</item>
+        <item>6:30 PM</item>
+        <item>7:00 PM</item>
+        <item>7:30 PM</item>
+        <item>8:00 PM</item>
+        <item>8:30 PM</item>
+        <item>9:00 PM</item>
+        <item>9:30 PM</item>
+        <item>10:00 PM</item>
+        <item>10:30 PM</item>
+        <item>11:00 PM</item>
+        <item>11:30 PM</item>
+    </string-array>
+
+</resources>
