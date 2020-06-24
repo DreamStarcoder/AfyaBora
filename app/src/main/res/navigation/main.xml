@@ -15,17 +15,17 @@
     </fragment>
     <fragment
         android:id="@+id/patientFragment"
-        android:name="com.acuity.afyabora.ui.fragments.PatientFragment"
+        android:name="com.acuity.afyabora.ui.fragments.authen.PatientFragment"
         android:label="fragment_patient"
         tools:layout="@layout/fragment_patient" />
     <fragment
         android:id="@+id/labortaryFragment"
-        android:name="com.acuity.afyabora.ui.fragments.LabortaryFragment"
+        android:name="com.acuity.afyabora.ui.fragments.authen.LabortaryFragment"
         android:label="fragment_labortary"
         tools:layout="@layout/fragment_labortary" />
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.acuity.afyabora.ui.fragments.LoginFragment"
+        android:name="com.acuity.afyabora.ui.fragments.authen.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login">
         <action
@@ -37,12 +37,12 @@
     </fragment>
     <fragment
         android:id="@+id/doctorFragment"
-        android:name="com.acuity.afyabora.ui.fragments.DoctorFragment"
+        android:name="com.acuity.afyabora.ui.fragments.authen.DoctorFragment"
         android:label="fragment_doctor"
         tools:layout="@layout/fragment_doctor" />
     <fragment
         android:id="@+id/signUpTypeFragment"
-        android:name="com.acuity.afyabora.ui.fragments.SignUpTypeFragment"
+        android:name="com.acuity.afyabora.ui.fragments.authen.SignUpTypeFragment"
         android:label="fragment_signup_type"
         tools:layout="@layout/fragment_signup_type">
         <action
@@ -57,7 +57,7 @@
     </fragment>
     <fragment
         android:id="@+id/forgotFragment"
-        android:name="com.acuity.afyabora.ui.fragments.ForgotFragment"
+        android:name="com.acuity.afyabora.ui.fragments.authen.ForgotFragment"
         android:label="ForgotFragment">
         <action
             android:id="@+id/action_forgotFragment_to_signUpTypeFragment"

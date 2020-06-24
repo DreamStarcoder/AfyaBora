@@ -1,28 +1,24 @@
-package com.acuity.afyabora.ui.fragments;
+package com.acuity.afyabora.ui.fragments.authen;
 
 import android.app.DatePickerDialog;
-import android.icu.text.SimpleDateFormat;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
-import android.support.design.widget.TextInputEditText;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.fragment.app.Fragment;
+
 import com.acuity.afyabora.R;
+import com.google.android.material.textfield.TextInputEditText;
 import com.toptoche.searchablespinnerlibrary.SearchableSpinner;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
-import java.util.Locale;
 import java.util.Objects;
 
 public class PatientFragment extends Fragment {

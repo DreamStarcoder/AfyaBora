@@ -4,107 +4,144 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragments.LoginFragment">
+    tools:context=".ui.fragments.authen.LoginFragment"
+    android:background="#F4EEEE">
 
     <TextView
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#C8AAAAAA"
         android:text="Login"
+        android:background="@android:color/white"
+        android:elevation="@dimen/_10sdp"
         android:textSize="@dimen/_16sdp"
+
         android:textStyle="bold"
         android:textColor="@android:color/black"
         android:padding="@dimen/_8sdp" />
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/etL_mail"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="@dimen/_200sdp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_100sdp"
-        android:hint="Enter Email">
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/et_mail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:inputType="textEmailAddress"
-            tools:ignore="KeyboardInaccessibleWidget" />
-    </android.support.design.widget.TextInputLayout>
-
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/etl_password"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="@dimen/_200sdp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_below="@id/etL_mail"
-        app:passwordToggleEnabled="true"
-        android:hint="Enter Password">
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/et_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:inputType="textPassword"
-            tools:ignore="KeyboardInaccessibleWidget" />
-    </android.support.design.widget.TextInputLayout>
-
-    <LinearLayout
-        android:id="@+id/layout"
+    <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/etl_password"
-        android:layout_marginLeft="@dimen/_40sdp"
-        android:layout_marginTop="@dimen/_16sdp"
-        android:orientation="horizontal">
+        android:layout_below="@id/header"
+        android:layout_margin="@dimen/_8sdp"
+        android:padding="@dimen/_16sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:elevation="@dimen/_6sdp">
 
-        <android.support.design.button.MaterialButton
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="wrap_content"
-            android:text="Login"
-            app:cornerRadius="@dimen/_16sdp"
-            android:backgroundTint="@android:color/holo_blue_light" />
+        <RelativeLayout
 
-        <TextView
-            android:id="@+id/btn_forgot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Forgot Password"
-            android:textStyle="bold"
-            android:layout_marginLeft="@dimen/_8sdp"
-            android:textColor="@android:color/holo_blue_dark" />
-    </LinearLayout>
+            android:layout_centerInParent="true"
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_below="@id/layout"
-        android:gravity="center">
+            >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Don't have an account, click here to create an account."
-            android:textStyle="bold"
-            android:layout_marginLeft="@dimen/_8sdp"
-            android:textColor="@android:color/black" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/etL_mail"
+                android:layout_centerHorizontal="true" />
 
-        <android.support.design.button.MaterialButton
-            android:id="@+id/btn_new_account"
-            android:layout_width="@dimen/_150sdp"
-            android:layout_height="wrap_content"
-            android:text="Create an Account"
-            app:cornerRadius="@dimen/_30sdp"
-            android:backgroundTint="@android:color/holo_blue_dark" />
-    </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etL_mail"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_100sdp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:hint="Enter Email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:inputType="textEmailAddress"
+                    tools:ignore="KeyboardInaccessibleWidget" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etl_password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_below="@id/etL_mail"
+                app:passwordToggleEnabled="true"
+                android:hint="Enter Password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:inputType="textPassword"
+                    tools:ignore="KeyboardInaccessibleWidget" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etl_password"
+
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_login"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:text="Login"
+                    android:backgroundTint="@android:color/holo_blue_light" />
+
+                <TextView
+                    android:id="@+id/btn_forgot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Forgot Password?"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:textColor="@android:color/holo_blue_dark" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#c0c0c0"
+                    android:layout_marginBottom="@dimen/_20sdp" />
+
+                <TextView
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Don't have an account,click here to create an account."
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_new_account"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:text="Create an Account"
+                    android:textSize="@dimen/_10sdp"
+                    android:backgroundTint="@android:color/holo_blue_dark" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 </RelativeLayout>

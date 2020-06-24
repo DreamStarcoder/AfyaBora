@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F4EEEE"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragments.LabortaryFragment">
+    tools:context=".ui.fragments.authen.LabortaryFragment">
 
     <TextView
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
-        android:background="#4BAAAAAA"
+        android:background="@android:color/white"
         android:paddingTop="@dimen/_10sdp"
+        android:elevation="@dimen/_8sdp"
         android:text="Register Account"
         android:textAlignment="center"
         android:textColor="@android:color/black"
@@ -20,111 +22,65 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/header"
-        android:padding="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_40sdp"
         android:scrollbars="none">
 
-        <RelativeLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="@dimen/_16sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:elevation="@dimen/_10sdp"
+            android:layout_margin="@dimen/_10sdp">
 
             <LinearLayout
                 android:id="@+id/layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/_40sdp"
-                android:orientation="horizontal">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Name"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/_15sdp"
-                    android:textStyle="bold" />
-
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="@dimen/_200sdp"
+                    android:layout_width="@dimen/_250sdp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp">
+                    android:hint="Name"
+                    android:layout_marginTop="@dimen/_8sdp">
 
-                    <android.support.design.widget.TextInputEditText
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/editText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
                         android:maxLines="1"
                         tools:ignore="KeyboardInaccessibleWidget" />
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-            </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/layout_two"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/layout"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Phone"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/_15sdp"
-                    android:textStyle="bold" />
-
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="@dimen/_200sdp"
+                    android:layout_width="@dimen/_250sdp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp">
+                    android:hint="Phone">
 
-                    <android.support.design.widget.TextInputEditText
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_phone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
                         android:maxLines="1"
                         tools:ignore="KeyboardInaccessibleWidget" />
-                </android.support.design.widget.TextInputLayout>
-            </LinearLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-            <LinearLayout
-                android:id="@+id/layout_three"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/layout_two"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:orientation="horizontal"
-                android:textAlignment="center">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="E-mail"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/_15sdp"
-                    android:textStyle="bold" />
-
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="@dimen/_200sdp"
+                    android:layout_width="@dimen/_250sdp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp">
+                    android:layout_marginEnd="16dp"
+                    android:hint="Email Address">
 
-                    <android.support.design.widget.TextInputEditText
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_add"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -132,165 +88,131 @@
                         android:inputType="textEmailAddress"
                         android:maxLines="1"
                         tools:ignore="KeyboardInaccessibleWidget" />
-                </android.support.design.widget.TextInputLayout>
-            </LinearLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
 
-            <LinearLayout
-                android:id="@+id/layout_four"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/layout_three"
-                android:layout_marginTop="@dimen/_10sdp">
+                <LinearLayout
+                    android:id="@+id/layout_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_gravity="center">
 
-                <TextView
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_16sdp"
+                        android:layout_marginRight="@dimen/_4sdp"
+                        android:text="@string/upload_certifications"
+                        android:layout_gravity="start|center"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_20sdp"
+                            android:background="@color/design_default_color_primary"
+                            android:backgroundTint="@color/cardview_light_background"
+                            android:elevation="@dimen/_10sdp"
+                            android:ellipsize="end"
+                            android:focusable="false"
+                            android:maxLines="1"
+                            android:text="Choose File "
+                            android:textAlignment="center"
+                            android:textColor="@android:color/holo_blue_light"
+                            tools:ignore="KeyboardInaccessibleWidget" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_below="@id/layout_four"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
 
-                    android:text="Upload Certifications"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/_15sdp"
-                    android:textStyle="bold" />
-
-                <android.support.design.widget.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="@dimen/_120sdp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp">
-
-                    <android.support.design.widget.TextInputEditText
-                        android:id="@+id/et_date"
-                        android:layout_width="match_parent"
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="@dimen/_170sdp"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="@dimen/_20sdp"
-                        android:background="@color/design_default_color_primary"
-                        android:backgroundTint="@color/cardview_light_background"
-                        android:elevation="@dimen/_10sdp"
-                        android:ellipsize="end"
-                        android:focusable="false"
-                        android:maxLines="1"
-                        android:text="Choose File "
-                        android:textAlignment="center"
-                        android:textColor="@android:color/holo_blue_light"
-                        tools:ignore="KeyboardInaccessibleWidget" />
-                </android.support.design.widget.TextInputLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/layout_five"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/layout_four"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:orientation="horizontal"
-                android:textAlignment="center">
+                        android:layout_marginEnd="4dp"
+                        android:layout_gravity="start"
+                        android:hint="yours current location">
 
-                <android.support.design.widget.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="@dimen/_150sdp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:hint="yours current location"
-                    >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            tools:ignore="KeyboardInaccessibleWidget" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
-                    <android.support.design.widget.TextInputEditText
-                        android:layout_width="match_parent"
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="@dimen/_100sdp"
                         android:layout_height="wrap_content"
-                        android:ellipsize="end"
-                        android:inputType="textEmailAddress"
-                        android:maxLines="1"
-                        tools:ignore="KeyboardInaccessibleWidget" />
-                </android.support.design.widget.TextInputLayout>
-                <android.support.design.widget.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="@dimen/_100sdp"
-                    android:layout_height="wrap_content"
-                    android:hint="Address "
-                    >
-                    <android.support.design.widget.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:ellipsize="end"
-                        android:inputType="textEmailAddress"
-                        android:maxLines="1"
-                        tools:ignore="KeyboardInaccessibleWidget" />
-                </android.support.design.widget.TextInputLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/layout_six"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/layout_five"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:orientation="vertical"
-                android:textAlignment="center">
+                        android:hint="Address ">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            tools:ignore="KeyboardInaccessibleWidget" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
                 <Spinner
                     android:layout_gravity="center"
                     android:layout_width="@dimen/_200sdp"
-                    android:layout_height="@dimen/_30sdp"
+                    android:layout_height="@dimen/_40sdp"
                     android:entries="@array/working_days"
-                    android:background="@android:drawable/btn_dropdown"
-                    />
+                    android:background="@android:drawable/btn_dropdown" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_margin="@dimen/_10sdp"
-                    android:layout_gravity="center"
-                    >
+                    android:layout_gravity="center">
+
                     <Spinner
                         android:layout_width="@dimen/_120sdp"
-                        android:layout_height="@dimen/_30sdp"
+                        android:layout_height="@dimen/_40sdp"
                         android:entries="@array/opening_hours"
                         android:layout_marginRight="@dimen/_10sdp"
-                        android:background="@android:drawable/btn_dropdown"
-                        />
+                        android:background="@android:drawable/btn_dropdown" />
+
                     <Spinner
                         android:layout_width="@dimen/_120sdp"
-                        android:layout_height="@dimen/_30sdp"
+                        android:layout_height="@dimen/_40sdp"
                         android:entries="@array/closing_hours"
-                        android:background="@android:drawable/btn_dropdown"
-                        />
+                        android:background="@android:drawable/btn_dropdown" />
                 </LinearLayout>
-            </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/layout_nine"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/layout_six"
-                android:layout_marginLeft="@dimen/_50sdp"
-                android:orientation="vertical">
-
-                <android.support.design.widget.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="@dimen/_200sdp"
-                    android:layout_height="wrap_content"
-                    android:inputType="textMultiLine"
-                    android:hint="Write your area of specialization \n here coz it will help a patient when looking
-                    for a lab for a \n lab test prescribed to him/her by a doctor ...">
-                    <android.support.design.widget.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="start|left"
-                        android:maxLines="10"
-                        android:minLines="10"
-
-                        tools:ignore="KeyboardInaccessibleWidget" />
-                </android.support.design.widget.TextInputLayout>
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     app:passwordToggleEnabled="true"
-                    android:layout_width="@dimen/_200sdp"
+                    android:layout_width="@dimen/_250sdp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
                     android:hint="Password">
-                    <android.support.design.widget.TextInputEditText
+
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -298,19 +220,19 @@
                         android:maxLines="1"
                         android:inputType="textPassword"
                         tools:ignore="KeyboardInaccessibleWidget" />
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     app:passwordToggleEnabled="true"
-                    android:layout_width="@dimen/_200sdp"
+                    android:layout_width="@dimen/_250sdp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
 
                     android:hint="Conform Password">
 
-                    <android.support.design.widget.TextInputEditText
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_conform_password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -318,21 +240,29 @@
                         android:inputType="textPassword"
                         android:maxLines="1"
                         tools:ignore="KeyboardInaccessibleWidget" />
-                </android.support.design.widget.TextInputLayout>
-            </LinearLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/layout_nine"
-                android:layout_centerInParent="true"
-                android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="@dimen/_250sdp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:hint="Write your area of specialization ...">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|left"
+                        android:maxLines="10"
+                        android:minLines="10"
+                        tools:ignore="KeyboardInaccessibleWidget" />
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="How to you find us"
+                    android:text="@string/how_do_you_find_us"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/_15sdp"
                     android:textStyle="bold" />
@@ -346,27 +276,27 @@
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="On Facebook" />
+                        android:text="@string/on_facebook" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="On Instagram" />
+                        android:text="@string/on_instagram" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="On twitter" />
+                        android:text="@string/on_twitter" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="On Google Search" />
+                        android:text="@string/on_google_search" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="On Youtube Ad" />
+                        android:text="@string/on_youtube_ad" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -379,16 +309,15 @@
                         android:text="other Platforms" />
                 </RadioGroup>
 
-                <android.support.design.button.MaterialButton
-                    android:layout_width="@dimen/_150sdp"
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="@dimen/_200sdp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#1285E1"
-                    android:text="Register"
-                    android:textSize="@dimen/_16sdp" />
+                    android:textSize="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:text="Register" />
             </LinearLayout>
-
-
-        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
     </ScrollView>
 
-</FrameLayout>
+</RelativeLayout>

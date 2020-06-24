@@ -1,15 +1,15 @@
-package com.acuity.afyabora.ui.fragments;
+package com.acuity.afyabora.ui.fragments.authen;
 
 import android.os.Bundle;
-import android.support.design.button.MaterialButton;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
 import com.acuity.afyabora.R;
+import com.google.android.material.button.MaterialButton;
 
 public class ForgotFragment extends Fragment {
     private MaterialButton btnNewAccount;

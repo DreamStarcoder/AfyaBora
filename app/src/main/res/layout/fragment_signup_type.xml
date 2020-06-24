@@ -3,44 +3,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragments.SignUpTypeFragment">
+    tools:context=".ui.fragments.authen.SignUpTypeFragment">
 
-    <android.support.design.button.MaterialButton
-        android:id="@+id/bt_patient"
-        android:layout_width="@dimen/_260sdp"
-        android:layout_height="@dimen/_50sdp"
-        android:layout_above="@id/bt_doctor"
-        android:textSize="@dimen/_15sdp"
-        app:cornerRadius="@dimen/_20sdp"
-        android:backgroundTint="@color/cardview_light_background"
-        android:textColor="@android:color/holo_blue_light"
-        android:layout_centerHorizontal="true"
-        android:text="Register as a Patient" />
-
-    <android.support.design.button.MaterialButton
-        android:id="@+id/bt_doctor"
-        android:layout_width="@dimen/_260sdp"
-        android:layout_height="@dimen/_50sdp"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        android:layout_margin="@dimen/_10sdp"
-        android:textSize="@dimen/_15sdp"
-        android:drawableStart="@drawable/ic_doctor"
-        app:cornerRadius="@dimen/_20sdp"
-        android:backgroundTint="@color/cardview_light_background"
-        android:textColor="@android:color/holo_blue_light"
-        android:drawableTint="@color/colorAccent"
-        android:text="Register as a Doctor" />
+        android:layout_margin="@dimen/_16sdp"
+        android:backgroundTint="#F4F4F4"
+        app:cardCornerRadius="@dimen/_30sdp">
 
-    <android.support.design.button.MaterialButton
-        android:id="@+id/bt_labortary"
-        android:layout_width="@dimen/_260sdp"
-        android:layout_height="@dimen/_50sdp"
-        android:layout_centerInParent="true"
-        android:textSize="@dimen/_14sdp"
-        android:backgroundTint="@color/cardview_light_background"
-        android:textColor="@android:color/holo_blue_light"
-        android:layout_below="@id/bt_doctor"
-        app:cornerRadius="@dimen/_20sdp"
-        android:text="Register as a Laboratory" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bt_patient"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_above="@id/bt_doctor"
+                android:textSize="@dimen/_15sdp"
+                android:elevation="@dimen/_10sdp"
+                android:background="@color/colorAccent"
+                android:backgroundTint="@color/cardview_light_background"
+                android:textColor="@android:color/holo_blue_light"
+                android:layout_centerHorizontal="true"
+                android:textAllCaps="false"
+                android:text="Register as a Patient" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bt_doctor"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/_10sdp"
+                android:textSize="@dimen/_15sdp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/cardview_light_background"
+                android:textColor="@android:color/holo_blue_light"
+                android:text="Register as a Doctor" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bt_labortary"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/_14sdp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/cardview_light_background"
+                android:textColor="@android:color/holo_blue_light"
+                android:layout_below="@id/bt_doctor"
+                android:text="Register as a Laboratory" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </RelativeLayout>

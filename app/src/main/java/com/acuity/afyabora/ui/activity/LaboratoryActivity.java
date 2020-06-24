@@ -6,11 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.acuity.afyabora.R;
 
-public class DashBoardActivity extends AppCompatActivity {
+public class LaboratoryActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dash_board);
+        setContentView(R.layout.activity_labortory);
     }
 }
